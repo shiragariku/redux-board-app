@@ -15,6 +15,15 @@ function App() {
         <button>投稿</button>
         <hr />
       </div>
+      <div className="displayPosts">
+        {postList.map((post) => (
+          <div key={post.id} className="post">
+            <h1 className="postName">{post.name}</h1>
+            <h1 className="postContent">{post.content}</h1>
+            <button>削除</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
